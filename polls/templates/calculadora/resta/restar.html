@@ -12,6 +12,20 @@
 </head>
 <body>
     <h1>Restar</h1>
+
+    <form action="/calc/resta" method="post">
+        {% csrf_token %}
+        <label for="primer_numerador">Primer numerador: </label>
+        <input id="primer_numerador" type="text" name="primer_numerador" value="" required>
+        <label for="primer_denominador">Primer denominador: </label>
+        <input id="primer_denominador" type="text" name="primer_denominador" value="" required>
+        <label for="segundo_numerador">Segundo numerador: </label>
+        <input id="segundo_numerador" type="text" name="segundo_numerador" value="" required>
+        <label for="segundo_denominador">Segundo denominador: </label>
+        <input id="segundo_denominador" type="text" name="segundo_denominador" value="" required>
+        <input type="submit" value="OK">
+    </form>
+
     <a href="/" class="btn btn-light">Home</a>
 </body>
 </html>
