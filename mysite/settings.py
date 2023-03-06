@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'endpoints.apps.EndpointsConfig',
     'calculadora.apps.CalculadoraConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',

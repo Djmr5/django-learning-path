@@ -21,5 +21,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('calc/', include('calculadora.urls')),
     path('polls/', include('polls.urls')),
+    path('validausuario/', include('endpoints.urls')),
     path('admin/', admin.site.urls),
 ]
