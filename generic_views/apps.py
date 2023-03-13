@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EndpointsConfig(AppConfig):
+class GenericViewsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'endpoints'
+    name = 'generic_views'

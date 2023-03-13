@@ -6,6 +6,10 @@ from fractions import Fraction
 
 # Create your views here.
 
+class Index(View):
+    def get(request):
+        return render(request, 'calculadora/calculadora_index.html')
+
 class Suma(View):
     
     def get(self, request):
