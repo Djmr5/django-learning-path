@@ -7,5 +7,7 @@ app_name = "generic_views"
 urlpatterns = [
     path('', TemplateView.as_view(template_name='generic_views/main.html')),
     path('cats', views.CatListView.as_view(), name='cats'),
-    path('cat/<int:cat_id>', views.CatDetailView.as_view(), name='cat')
+    path('cat/<int:cat_id>', views.CatDetailView.as_view(), name='cat'),
+    path('horses', views.HorseListView.as_view(), name='horses'),
+    path('horse/<int:pk>', views.HorseDetailView.as_view(), name='horse')
 ]

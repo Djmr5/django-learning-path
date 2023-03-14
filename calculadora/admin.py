@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Fracciones
+
+from . import models
 
 # Register your models here.
-admin.site.register(Fracciones)
+admin.site.register(models.Fracciones)

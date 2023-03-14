@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat List</title>
+    <title>Horse List</title>
 </head>
 <body>
-    <h1>Cat list</h1>
+    <h1>Horse list</h1>
     <ul>
-        {% for cat in lista_gatos %}
+        <!-- horse_list es el json que siempre se crea con las Generic Views -->
+        {% for horse in horse_list %}
         <!-- 
             generic_views hace referencia a la variable app_name declarada en urls
-            :cat hace referencia a la variable/etiqueta name de un path.
+            :horse hace referencia a la variable/etiqueta name de un path.
         -->
-        <a href="{% url 'generic_views:cat' cat.pk %}">
-            <li>{{ cat.name }}</li>
+        <a href="{% url 'generic_views:horse' horse.pk %}">
+            <li>{{ horse.name }}</li>
         </a>
         {% endfor %}
     </ul>
