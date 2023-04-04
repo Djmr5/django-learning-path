@@ -14,7 +14,7 @@
             generic_views hace referencia a la variable app_name declarada en urls
             :cat hace referencia a la variable/etiqueta name de un path.
         -->
-        <a href="{% url 'generic_views:cat' cat.pk %}">
+        <a href="{% url 'gviews:cat' cat.pk %}">
             <li>{{ cat.name }}</li>
         </a>
         {% endfor %}

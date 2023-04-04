@@ -22,25 +22,25 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% 'index' %}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'website_index' %}">SB Admin</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'website_index' %}">SB Admin</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'website:index' %}">SB Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'polls:index' %}">Polls</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="{% url 'calculadora_index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calculadora</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="{% url 'calculadora:index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calculadora</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="{% url 'calculadora_suma' %}">Resta</a></li>
-                                <li><a class="dropdown-item" href="{% url 'calculadora_resta' %}">Suma</a></li>
-                                <li><a class="dropdown-item" href="{% url 'calculadora_multiplicacion' %}">Multiplicación</a></li>
-                                <li><a class="dropdown-item" href="{% url 'calculadora_division' %}">Divisón</a></li>
+                                <li><a class="dropdown-item" href="{% url 'calculadora:suma' %}">Resta</a></li>
+                                <li><a class="dropdown-item" href="{% url 'calculadora:resta' %}">Suma</a></li>
+                                <li><a class="dropdown-item" href="{% url 'calculadora:multiplicacion' %}">Multiplicación</a></li>
+                                <li><a class="dropdown-item" href="{% url 'calculadora:division' %}">Divisón</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="{% url 'gviews_index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">G Views</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="{% url 'gviews:index' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">G Views</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="{% url 'gviews_cats' %}">Cats</a></li>
-                                <li><a class="dropdown-item" href="{% url 'gviews_horses' %}">Horses</a></li>
+                                <li><a class="dropdown-item" href="{% url 'gviews:cats' %}">Cats</a></li>
+                                <li><a class="dropdown-item" href="{% url 'gviews:horses' %}">Horses</a></li>
                             </ul>
                         </li>
                     </ul>

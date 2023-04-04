@@ -15,7 +15,7 @@
             generic_views hace referencia a la variable app_name declarada en urls
             :horse hace referencia a la variable/etiqueta name de un path.
         -->
-        <a href="{% url 'generic_views:horse' horse.pk %}">
+        <a href="{% url 'gviews:horse' horse.pk %}">
             <li>{{ horse.name }}</li>
         </a>
         {% endfor %}
