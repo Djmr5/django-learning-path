@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Dividir</title>
+</head>
+<body>
+    <h1>Dividir</h1>
+
+    <form action="/calc/div" method="post">
+        {% csrf_token %}
+        <label for="primer_numerador">Primer numerador: </label>
+        <input id="primer_numerador" type="text" name="primer_numerador" value="" required>
+        <label for="primer_denominador">Primer denominador: </label>
+        <input id="primer_denominador" type="text" name="primer_denominador" value="" required>
+        <label for="segundo_numerador">Segundo numerador: </label>
+        <input id="segundo_numerador" type="text" name="segundo_numerador" value="" required>
+        <label for="segundo_denominador">Segundo denominador: </label>
+        <input id="segundo_denominador" type="text" name="segundo_denominador" value="" required>
+        <input type="submit" value="OK">
+    </form>
+
+    <a href="/calc" class="btn btn-light">Home</a>
+</body>
+</html>

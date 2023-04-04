@@ -3,11 +3,12 @@ from django.shortcuts import render
 from django.views import View
 from .models import Fracciones
 from fractions import Fraction
-
+from calculadora.models import Fracciones
+from django.views import generic
 # Create your views here.
 
 class Index(View):
-    def get(request):
+    def get(self, request):
         return render(request, 'calculadora/calculadora_index.html')
 
 class Suma(View):
@@ -117,3 +118,11 @@ class Division(View):
         }
         # return JsonResponse(resultados)
         return render(request, 'calculadora/division/divRes.html', resultados)
+
+class FraccionesListView(generic.ListView):
+    model = Fracciones
+    # generic views search for (class in lower case)_list.html
+
+class FraccionesDetailView(generic.DetailView):
+    model = Fracciones
+    # generic views search for (class in lower case)details.html
