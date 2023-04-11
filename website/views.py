@@ -13,8 +13,7 @@ def content(request):
 
 def log(request):
 
-    latest_logs = list(Log.objects.order_by('date')[:5].values())
-
+    latest_logs = list(Log.objects.order_by('date').values())
     return JsonResponse(latest_logs, safe=False)
 
 def crearAlumno(request):
