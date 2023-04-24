@@ -8,5 +8,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('gviews/', include('generic_views.urls')),
     path('website/', include('website.urls')),
+    path('acid/', include('acid.urls')),
     path('admin/', admin.site.urls),
 ]

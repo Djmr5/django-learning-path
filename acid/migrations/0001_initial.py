@@ -12,15 +12,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Fracciones',
+            name='Cliente',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('primerNum', models.IntegerField()),
-                ('primerDen', models.IntegerField()),
-                ('operador', models.CharField(default='+', max_length=1)),
-                ('segundoNum', models.IntegerField()),
-                ('segundoDen', models.IntegerField()),
-                ('result', models.CharField(default='0', max_length=200)),
+                ('nombre', models.CharField(max_length=50)),
+                ('saldo', models.DecimalField(decimal_places=2, max_digits=5)),
+                ('creado', models.DateTimeField(auto_now_add=True)),
+                ('modificado', models.DateTimeField(auto_now=True)),
             ],
         ),
     ]

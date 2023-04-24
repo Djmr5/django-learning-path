@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Log(models.Model):
-    points = models.IntegerField(max_length=200)
+    points = models.IntegerField()
     date = models.DateField('date added')
 
     def __str__(self):
