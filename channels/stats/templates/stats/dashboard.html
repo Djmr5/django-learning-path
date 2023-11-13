@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h3 id="dashboard-name">{{name}}</h3>
+        <div>Slug: <span id="dashboard-slug">{{slug}}</span></div>
+        <div>User: <span id="user">{{user}}</span></div>
+        <hr>
+        <div class="form-group">
+            <input type="number" id="data-input" class="form-control"><br>
+            <button class="btn btn-primary" id="submit-btn">Send</button>
+        </div>
+    </div>
+
+    <div class="col">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div id="data-box">
+        {% if data %}
+        {% for el in data %}
+        <p><strong>{{el.owner}}</strong>: {{el.value}}</p>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'stats/dashboard.js' %}" defer></script>
+{% endblock scripts %}

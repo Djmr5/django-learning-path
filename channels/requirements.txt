@@ -1,0 +1,7 @@
+django>=4.0.0,<4.1.0
+djangorestframework
+django-cors-headers
+channels
+channels-redis
+daphne
+Faker
