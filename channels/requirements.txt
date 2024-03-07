@@ -1,4 +1,5 @@
 django>=4.0.0,<4.1.0
+python-dotenv
 djangorestframework
 django-cors-headers
 channels
